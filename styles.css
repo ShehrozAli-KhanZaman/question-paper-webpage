@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f5f5f5;
+}
+
+#content {
+    width: 210mm;
+    padding: 10mm;
+    margin: 0 auto;
+    background: white;
+    /* border: 1px solid #000;  */
+    /* Border around the whole page */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.container {
+    display: flex;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.number-column {
+    width: 15mm; /* Adjust width as needed */
+    /* padding-right: 10mm; */
+    border-left: 1px solid #0f0808;
+    box-sizing: border-box;
+    /* border: 1px solid #000; */
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column;
+    
+    margin-bottom: 20px;
+    /* padding-bottom: 10px; */
+    /* padding-left: 10; */
+    /* padding: 0 5mm;  */
+}
+
+.number-column .number {
+    border-bottom: 1px solid #000; /* Border at the end of each number */
+    width: 100%; /* Ensures the border spans the full width of the column */
+    text-align: center; /* Center align numbers */
+    /* padding: 11mm 0; */
+     /* Adjust padding as needed */
+    box-sizing: border-box;
+    /* padding-bottom: -5; */
+}
+
+.question-column {
+    flex: 1;
+    /* padding-left: 10mm; */
+    box-sizing: border-box;
+}
+
+.question {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #0c0909;
+    box-sizing: border-box;
+}
+
+.question .number {
+    text-align: right;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #bd1d1d;
+}
+
+.question .text {
+    margin-bottom: 10px;
+}
+
+.question .text.urdu {
+    direction: rtl;
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+.question .text.english {
+    direction: ltr;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-evenly;
+    direction: ltr;
+    flex-wrap:wrap-reverse;
+    text-align: right;
+}
+
+.options p {
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+@media print {
+    body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    #content {
+        padding: 0;
+        /* border: 1px solid #000; */
+         /* Border around the whole page */
+    }
+}
